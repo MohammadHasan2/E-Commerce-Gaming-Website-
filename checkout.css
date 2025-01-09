@@ -1,0 +1,162 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url('images/b.jpg') no-repeat center center fixed; /* Add your image URL here */
+  background-size: cover;
+  color: #fff;
+  padding: 20px;
+}
+
+header div {
+  margin: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: blue;
+  margin: 30px;
+  padding: 20px;
+}
+
+/* Main Layout */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Slight transparency for the form area */
+  border-radius: 15px;
+}
+
+.checkout {
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #333;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.checkout h1 {
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.checkout form input,
+select {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #fff;
+}
+
+#radio-group {
+  display: flex;
+  justify-content: space-between; /* Spacing for radio buttons */
+  margin: 10px 0;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.checkout button {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  background-color: rgb(54, 57, 223);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.checkout button:hover {
+  background-color: rgb(31, 35, 214);
+}
+
+.invoice {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.invoice strong {
+  text-align: end;
+}
+
+/* Product List Styles */
+.list-product {
+  width: 100%;
+  max-width: 600px;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.list-product h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.list-product ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-product ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main {
+    width: 100%; /* Full width for smaller devices */
+    padding: 10px;
+  }
+
+  .checkout, .list-product {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #radio-group {
+    flex-direction: column; /* Stack radio buttons on smaller devices */
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .invoice {
+    grid-template-columns: 1fr; /* Stack invoice elements */
+    gap: 10px;
+  }
+}
+/* Fix for dropdown options */
+select,
+select option {
+  color: #000; /* Black text for dropdown options */
+  background-color: #fff; /* White background for options */
+}
+
+/* Ensures the dropdown itself looks consistent */
+select {
+  color: #fff; /* White text for the selected item */
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparent background for the dropdown */
+}
